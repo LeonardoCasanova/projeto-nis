@@ -8,6 +8,8 @@ Este programa foi desenvolvido em Symphony que cadastra o nome do Cidadão e ger
 * MYSQL
 * TWIG 
 
+#Necessário ter a versão PHP 8.1
+
 # 🔧 Instalação:
  Executar o comando:
 
