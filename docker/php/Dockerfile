@@ -26,4 +26,6 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
 
 RUN docker-php-ext-install pdo_mysql    
 
+RUN docker-php-ext-install mbstring
+
 WORKDIR /var/www
