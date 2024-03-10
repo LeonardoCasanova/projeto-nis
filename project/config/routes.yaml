@@ -1,0 +1,11 @@
+index:
+    path: /
+    controller: App\Controller\CidadaoController::index
+
+cidadao_cadastrar:
+    path: /cadastrar
+    controller: App\Controller\CidadaoController::cadastrar
+
+cidadao_pesquisar:
+    path: /pesquisar/{nis}
+    controller: App\Controller\CidadaoController::pesquisar
