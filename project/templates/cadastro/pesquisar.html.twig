@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Cidadão</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+    <h1>Buscar Cidadão</h1>
+    <form method="post" action="{{ path('pesquisar_post') }}">
+        <label for="nome">Número NIS:</label><br>
+        <input type="text" id="nis" name="nis"><br><br>
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>

@@ -87,12 +87,22 @@ class CidadaoController extends AbstractController
         return $nis;
     }
 
+    /**
+     * @Route("/pesquisar", name="pesquisar")
+     */
+    public function pesquisar(Request $request): Response
+    {
+        // Se não houver dados enviados, exibe o formulário de pesquisa
+        return $this->render('cadastro/pesquisar.html.twig');
+    }
+
 
     /**
-     * @Route("/pesquisar/{nis}", name="pesquisar_cidadao")
+     * @Route("/pesquisar", name="pesquisar_post", methods={"POST"})
      */
-    public function pesquisar($nis): Response
-    {
+    public function pesquisarPost(Request $request): Response
+    {        
+        $nis = $request->get('nis');
         $cidadao = $this->cidadaoRepository->findByNis($nis);
 
         if ($cidadao) {

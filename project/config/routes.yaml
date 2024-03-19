@@ -2,10 +2,16 @@ index:
     path: /
     controller: App\Controller\CidadaoController::index
 
+pesquisar_formulario:
+    path: /pesquisar
+    controller: App\Controller\CidadaoController::pesquisar    
+
 cidadao_cadastrar:
     path: /cadastrar
     controller: App\Controller\CidadaoController::cadastrar
 
-cidadao_pesquisar:
-    path: /pesquisar/{nis}
-    controller: App\Controller\CidadaoController::pesquisar
+pesquisar_post:
+    path: /retorno
+    controller: App\Controller\CidadaoController::pesquisarPost
+    methods: [POST]
+

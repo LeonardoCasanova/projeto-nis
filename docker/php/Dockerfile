@@ -24,7 +24,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions amqp
 
-RUN docker-php-ext-install pdo_mysql    
+RUN apt-get update && docker-php-ext-install pdo_mysql    
 
 RUN docker-php-ext-install mbstring
 
