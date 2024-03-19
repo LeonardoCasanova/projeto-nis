@@ -38,7 +38,16 @@ class CidadaoController extends AbstractController
 
         $nomeCidadao = $request->request->get('nome');
 
-        if (!empty($nomeCidadao)) { 
+        $buscaCidadao = $this->cidadaoRepository->findByName($nomeCidadao);
+
+        if ($buscaCidadao) {
+            return $this->render('cadastro/erro-busca.html.twig', [
+                'nome' => $buscaCidadao->getNome(),
+                'nis' => $buscaCidadao->getNis(),
+            ]);
+        }        
+
+        if (!empty($nomeCidadao)) {             
 
             $cidadao->setNis($this->gerarNis());
             $cidadao->setNome($nomeCidadao);

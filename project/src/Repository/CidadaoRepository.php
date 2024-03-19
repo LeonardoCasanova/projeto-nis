@@ -27,6 +27,13 @@ class CidadaoRepository extends ServiceEntityRepository
         return $this->findOneBy(['nis' => $nis]);
     }
 
+    // Método para buscar um cidadão pelo Nome
+    public function findByName(string $name): ?Cidadao
+    {
+        return $this->findOneBy(['nome' => $name]);
+    }
+
+
     // Método para cadastrar um novo cidadão
     public function cadastrarCidadao(string $nome, string $nis): Cidadao
     {
